@@ -1,11 +1,6 @@
 module.exports = {
-  parser: "@babel/eslint-parser",
   parserOptions: {
-    requireConfigFile: false,
-    babelOptions: {
-      presets: ["@babel/preset-react"]
-    },
-    ecmaVersion: 6,
+    ecmaVersion: 2021,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true
