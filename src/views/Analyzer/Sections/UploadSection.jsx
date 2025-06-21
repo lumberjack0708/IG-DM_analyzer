@@ -23,9 +23,40 @@ class UploadSection extends React.Component {
       fileReader.readAsText(file);
     };
 
+    const normalizeData = raw => {
+      if (Array.isArray(raw)) {
+        return raw;
+      }
+      if (raw.conversation && Array.isArray(raw.conversation)) {
+        return [raw];
+      }
+      if (raw.messages && Array.isArray(raw.messages)) {
+        const convo = raw.messages.map(m => ({
+          created_at: m.timestamp_ms
+            ? new Date(m.timestamp_ms).toISOString()
+            : m.timestamp || m.created_at,
+          sender: m.sender_name || m.sender,
+          text: m.text || m.content,
+          media: m.media || (m.photos && m.photos[0] && m.photos[0].uri)
+        }));
+        return [
+          {
+            participants: raw.participants || [],
+            conversation: convo
+          }
+        ];
+      }
+      return [];
+    };
+
     const handleFileRead = () => {
-      const content = JSON.parse(fileReader.result);
-      this.props.sendToParent(content)
+      let content = {};
+      try {
+        content = JSON.parse(fileReader.result);
+      } catch (e) {
+        content = {};
+      }
+      this.props.sendToParent(normalizeData(content));
     };
 
     return (
