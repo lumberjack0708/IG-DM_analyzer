@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core/styles";
 
-import infoStyle from "assets/jss/material-kit-react/components/infoStyle.jsx";
+import infoStyle from "../../assets/jss/material-kit-react/components/infoStyle.jsx";
 
 function InfoArea({ ...props }) {
   const { classes, title, description, iconColor, vertical } = props;

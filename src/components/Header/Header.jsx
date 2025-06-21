@@ -4,7 +4,7 @@ import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -14,7 +14,7 @@ import Drawer from "@material-ui/core/Drawer";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
-import headerStyle from "assets/jss/material-kit-react/components/headerStyle.jsx";
+import headerStyle from "../../assets/jss/material-kit-react/components/headerStyle.jsx";
 
 class Header extends React.Component {
   constructor(props) {

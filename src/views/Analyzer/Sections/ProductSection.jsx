@@ -7,11 +7,11 @@ import MoneyOff from "@material-ui/icons/MoneyOff";
 import PieChart from "@material-ui/icons/PieChart";
 import VerifiedUser from "@material-ui/icons/VerifiedUser";
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+import GridContainer from "../../../components/Grid/GridContainer.jsx";
+import GridItem from "../../../components/Grid/GridItem.jsx";
+import InfoArea from "../../../components/InfoArea/InfoArea.jsx";
 
-import productStyle from "assets/jss/material-kit-react/views/landingPageSections/productStyle.jsx";
+import productStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.jsx";
 
 class ProductSection extends React.Component {
   render() {

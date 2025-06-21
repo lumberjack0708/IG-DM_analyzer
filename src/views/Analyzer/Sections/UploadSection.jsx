@@ -1,9 +1,9 @@
 import React from "react";
 import ReactFileReader from "react-file-reader";
-import Button from "components/CustomButtons/Button.jsx";
+import Button from "../../../components/CustomButtons/Button.jsx";
 
-import teamStyle from "assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
-import withStyles from "@material-ui/core/styles/withStyles";
+import teamStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
+import { withStyles } from "@material-ui/core/styles";
 
 class UploadSection extends React.Component {
   constructor(props) {

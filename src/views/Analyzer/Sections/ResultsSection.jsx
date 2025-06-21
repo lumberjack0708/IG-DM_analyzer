@@ -1,7 +1,7 @@
 import React from "react";
 import {Line, Doughnut} from "react-chartjs-2";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Forum from "@material-ui/icons/Forum";
@@ -12,13 +12,13 @@ import PlayCircleFilled from "@material-ui/icons/PlayCircleFilled";
 
 
 // core components
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
-import Clearfix from "components/Clearfix/Clearfix.jsx";
+import GridContainer from "../../../components/Grid/GridContainer.jsx";
+import GridItem from "../../../components/Grid/GridItem.jsx";
+import InfoArea from "../../../components/InfoArea/InfoArea.jsx";
+import Clearfix from "../../../components/Clearfix/Clearfix.jsx";
 
 
-import workStyle from "assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx";
+import workStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/workStyle.jsx";
 
 class ResultsSection extends React.Component {
   constructor(props) {
