@@ -27,14 +27,19 @@ export const decodeUnicodeText = (text) => {
     // 處理可能的 JSON 字符串轉義
     try {
       // 嘗試解析為 JSON 字符串（這會自動處理 Unicode 轉義）
-      const jsonDecoded = JSON.parse(
-        '"' + decodedText.replace(/"/g, '\\"') + '"',
-      );
-      return jsonDecoded;
+      decodedText = JSON.parse('"' + decodedText.replace(/"/g, '\\"') + '"');
     } catch (e) {
-      // 如果 JSON 解析失敗，返回正則表達式處理的結果
-      return decodedText;
+      // 忽略錯誤，保持 decodedText 不變
     }
+
+    // 嘗試解碼可能的多重編碼（例如 UTF-8 以 \u00XX 形式存儲）
+    try {
+      decodedText = decodeURIComponent(escape(decodedText));
+    } catch (e) {
+      // 若失敗則保持原值
+    }
+
+    return decodedText;
   } catch (error) {
     console.warn("Unicode 解碼失敗:", error);
     return text;
