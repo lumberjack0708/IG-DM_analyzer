@@ -15,9 +15,15 @@ const style = {
 };
 
 function GridContainer({ ...props }) {
-  const { classes, children, className, ...rest } = props;
+  const { classes, children, className, justify, ...rest } = props;
+  const gridProps = { ...rest };
+
+  if (justify !== undefined) {
+    gridProps.justifyContent = justify;
+  }
+
   return (
-    <Grid container {...rest} className={classes.grid + " " + className}>
+    <Grid container {...gridProps} className={classes.grid + " " + className}>
       {children}
     </Grid>
   );
@@ -30,7 +36,15 @@ GridContainer.defaultProps = {
 GridContainer.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
+  justify: PropTypes.oneOf([
+    "flex-start",
+    "center",
+    "flex-end",
+    "space-between",
+    "space-around",
+    "space-evenly"
+  ])
 };
 
 export default withStyles(style)(GridContainer);
