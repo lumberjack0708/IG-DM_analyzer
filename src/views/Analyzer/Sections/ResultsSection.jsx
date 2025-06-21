@@ -1,5 +1,27 @@
 import React from "react";
-import {Line, Doughnut} from "react-chartjs-2";
+import { Line, Doughnut } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title
+} from "chart.js";
+
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title
+);
 // @material-ui/core components
 import { withStyles } from "@material-ui/core/styles";
 
@@ -28,12 +50,12 @@ class ResultsSection extends React.Component {
   }
 
   countConversations = () => {
-    const data = this.props.data
-    return data.length
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
+    return data.length;
   }
 
   getUniqueParticipants = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     let uniqueUsers = []
 
     data.map((record) => {
@@ -48,7 +70,7 @@ class ResultsSection extends React.Component {
   }
 
   countMessages = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     let msgCount = 0
 
     data.map((record) => {
@@ -59,7 +81,7 @@ class ResultsSection extends React.Component {
   }
 
   countMsgsByType = (type) => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     let msgCount = 0
 
     data.map((record) => {
@@ -80,7 +102,7 @@ class ResultsSection extends React.Component {
   }
 
   makeMsgTimeData = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     var chartData = []
     var labels = []
     var dataPoints = []
@@ -122,7 +144,7 @@ class ResultsSection extends React.Component {
   }
 
   dailyFrequencyCount = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     var chartData = []
     var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     var labels = []
@@ -179,7 +201,7 @@ class ResultsSection extends React.Component {
   }
 
   makeSenderQtyData = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     var senderData = {}
 
     data.map((record) => {
@@ -208,7 +230,7 @@ class ResultsSection extends React.Component {
   }
 
   getMostPopularWords = () => {
-    const data = this.props.data
+    const data = Array.isArray(this.props.data) ? this.props.data : [];
     var wordlist = []
     var topWrdCount = {}
     var topFiveWords = []
@@ -257,13 +279,13 @@ class ResultsSection extends React.Component {
     return (
       <div className={classes.section}>
         <GridContainer justify="center">
-          <GridItem cs={12} sm={12} md={8}>
+          <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>Here is what we found.</h2>
           </GridItem>
         </GridContainer>
 
         <GridContainer>
-          <GridItem cs={3} sm={3} md={3}>
+          <GridItem xs={3} sm={3} md={3}>
             <InfoArea
                 title="Conversations"
                 description={`You had ${this.countConversations()} conversations involving ${this.getUniqueParticipants()} different participants!`}
@@ -272,7 +294,7 @@ class ResultsSection extends React.Component {
             </InfoArea>
           </GridItem>
 
-          <GridItem cs={3} sm={3} md={3}>
+          <GridItem xs={3} sm={3} md={3}>
             <InfoArea
                 title="Messages"
                 description={`Total Amount of Messages (sent/recieved): ${this.countMessages()}`}
@@ -281,7 +303,7 @@ class ResultsSection extends React.Component {
             </InfoArea>
           </GridItem>
 
-          <GridItem cs={3} sm={3} md={3}>
+          <GridItem xs={3} sm={3} md={3}>
             <InfoArea
                 title="Texts Messages"
                 description={`Text Messages: ${this.countMsgsByType('text')}`}
@@ -290,7 +312,7 @@ class ResultsSection extends React.Component {
             </InfoArea>
           </GridItem>
 
-          <GridItem cs={3} sm={3} md={3}>
+          <GridItem xs={3} sm={3} md={3}>
             <InfoArea
                 title="Media Messages"
                 description={`Media Messages: ${this.countMsgsByType('media')}`}
@@ -302,14 +324,14 @@ class ResultsSection extends React.Component {
         </GridContainer>
 
         <GridContainer>
-          <GridItem cs={6} sm={6} md={6}>
+          <GridItem xs={6} sm={6} md={6}>
             <Line
               data={this.makeMsgTimeData()}
               options={this.lineChartOptions()}
             />
           </GridItem>
 
-          <GridItem cs={6} sm={6} md={6}>
+          <GridItem xs={6} sm={6} md={6}>
             <Doughnut
               data={this.makeSenderQtyData()}
               options={{
@@ -330,7 +352,7 @@ class ResultsSection extends React.Component {
         <hr style={{opacity: 0.3, margin: 10}} />
 
         <GridContainer style={{height: 270}}>
-          <GridItem cs={6} sm={6} md={6}>
+          <GridItem xs={6} sm={6} md={6}>
             <Doughnut
               data={this.getMostPopularWords()}
               options={{
@@ -347,7 +369,7 @@ class ResultsSection extends React.Component {
             />
           </GridItem>
 
-          <GridItem cs={6} sm={6} md={6}>
+          <GridItem xs={6} sm={6} md={6}>
             <Line
               data={this.dailyFrequencyCount()}
               options={{
