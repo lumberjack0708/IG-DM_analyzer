@@ -21,11 +21,10 @@ class ProductSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Let's Talk Talking</h2>
+            <h2 className={classes.title}>分析您的 Instagram 對話</h2>
             <h5 className={classes.description}>
-              Upload the JSON output of your Instagram DM conversations and we
-              will provide you some simple metrics and graphs that you can use
-              for analytics and fun!
+              上傳您的 Instagram 私訊對話 JSON 檔案，我們將為您提供簡單的統計指標和圖表，
+              讓您用於數據分析和娛樂！
             </h5>
           </GridItem>
         </GridContainer>
@@ -33,8 +32,8 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Free"
-                description="You can use this tool totally free. No cost to you at all!"
+                title="完全免費"
+                description="您可以完全免費使用此工具，對您來說沒有任何費用！"
                 icon={MoneyOff}
                 iconColor="info"
                 vertical
@@ -42,8 +41,8 @@ class ProductSection extends React.Component {
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Readable Results"
-                description="Display the results to the conversations in a readable and understandable format!"
+                title="易讀結果"
+                description="以易讀且易懂的格式顯示對話分析結果！"
                 icon={PieChart}
                 iconColor="danger"
                 vertical
@@ -51,8 +50,8 @@ class ProductSection extends React.Component {
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Secure"
-                description="Your upload is safe here. We do not keep a copy of your file, we simply read it as you give it to us. Refresh the page and it's like it never happened."
+                title="安全可靠"
+                description="您的上傳在這裡是安全的。我們不會保留您檔案的副本，只是在您提供給我們時讀取它。重新整理頁面，就像什麼都沒發生過一樣。"
                 icon={VerifiedUser}
                 iconColor="success"
                 vertical

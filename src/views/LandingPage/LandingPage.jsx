@@ -45,22 +45,19 @@ class LandingPage extends React.Component {
           <div className={classes.container}>
             <GridContainer>
               <GridItem xs={12} sm={12} md={6}>
-                <h1 className={classes.title}>Your Story Starts With Us.</h1>
+                <h1 className={classes.title}>分析您的 Instagram 對話</h1>
                 <h4>
-                  Every landing page needs a small description after the big
-                  bold title, that's why we added this text here. Add here all
-                  the information that can make you or your product create the
-                  first impression.
+                  每個首頁都需要在大標題後有一小段描述，這就是為什麼我們在這裡添加這段文字。
+                  在這裡添加所有能讓您或您的產品創造第一印象的資訊。
                 </h4>
                 <br />
                 <Button
                   color="danger"
                   size="lg"
-                  href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                  target="_blank"
+                  href="/analyzer"
                   rel="noopener noreferrer"
                 >
-                  <i className="fas fa-play" />Watch video
+                  <i className="fas fa-chart-bar" /> 開始分析
                 </Button>
               </GridItem>
             </GridContainer>

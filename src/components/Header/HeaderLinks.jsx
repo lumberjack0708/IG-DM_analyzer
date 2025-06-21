@@ -25,7 +25,7 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Components"
+          buttonText="組件"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -33,14 +33,14 @@ function HeaderLinks({ ...props }) {
           buttonIcon={Apps}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>
-              All components
+              所有組件
             </Link>,
             <a
               href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
               target="_blank"
               className={classes.dropdownLink}
             >
-              Documentation
+              文件說明
             </a>
           ]}
         />
@@ -52,13 +52,13 @@ function HeaderLinks({ ...props }) {
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Download
+          <CloudDownload className={classes.icons} /> 下載
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-twitter"
-          title="Follow us on twitter"
+          title="在 Twitter 上關注我們"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -75,7 +75,7 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-facebook"
-          title="Follow us on facebook"
+          title="在 Facebook 上關注我們"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >
@@ -92,7 +92,7 @@ function HeaderLinks({ ...props }) {
       <ListItem className={classes.listItem}>
         <Tooltip
           id="instagram-tooltip"
-          title="Follow us on instagram"
+          title="在 Instagram 上關注我們"
           placement={window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
         >

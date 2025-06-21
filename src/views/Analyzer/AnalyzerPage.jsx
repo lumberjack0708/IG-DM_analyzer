@@ -35,30 +35,26 @@ class AnalyzerPage extends React.Component {
   render() {
     const { classes } = this.props;
     const fileDataSet = () => {
-      return this.state.fileData ? true : false
-    }
-    const setFileData = content => {
-      this.setState({ fileData: content })
-    }
+      return this.state.fileData ? true : false;
+    };
+    const setFileData = (content) => {
+      this.setState({ fileData: content });
+    };
 
     return (
       <div>
         <Header
           className={classNames(classes.header)}
-          brand="Instagram DM Analyzer"
+          brand="Instagram DM 分析器"
         />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <ProductSection />
-            {!fileDataSet() ?
-              <UploadSection
-                sendToParent={setFileData}
-              />
-              :
-              <ResultsSection
-                data={this.state.fileData}
-              />
-            }
+            {!fileDataSet() ? (
+              <UploadSection sendToParent={setFileData} />
+            ) : (
+              <ResultsSection data={this.state.fileData} />
+            )}
           </div>
         </div>
         <Footer />
