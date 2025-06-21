@@ -3,10 +3,7 @@ import ReactFileReader from "react-file-reader";
 import Button from "../../../components/CustomButtons/Button.jsx";
 
 // 導入解碼工具
-import {
-  decodeInstagramMessages,
-  containsUnicodeEscapes,
-} from "../../../utils/textDecoder.js";
+import { decodeInstagramMessages } from "../../../utils/textDecoder.js";
 
 import teamStyle from "../../../assets/jss/material-kit-react/views/landingPageSections/teamStyle.jsx";
 import { withStyles } from "@material-ui/core/styles";
@@ -30,24 +27,32 @@ class UploadSection extends React.Component {
     };
 
     const normalizeData = (raw) => {
-      // 先檢查是否需要解碼
-      const rawString = JSON.stringify(raw);
-      let processedData = raw;
+      // 直接對讀取到的資料進行解碼
+      let processedData = decodeInstagramMessages(raw);
 
-      if (containsUnicodeEscapes(rawString)) {
-        console.log("檢測到 Unicode 編碼，正在解碼...");
-        processedData = decodeInstagramMessages(raw);
-        console.log("解碼完成");
-      }
+      const extractNames = (arr) =>
+        (arr || []).map((p) =>
+          typeof p === "string"
+            ? p
+            : p.name || p.username || "",
+        );
 
       if (Array.isArray(processedData)) {
-        return processedData;
+        return processedData.map((rec) => ({
+          ...rec,
+          participants: extractNames(rec.participants),
+        }));
       }
       if (
         processedData.conversation &&
         Array.isArray(processedData.conversation)
       ) {
-        return [processedData];
+        return [
+          {
+            ...processedData,
+            participants: extractNames(processedData.participants),
+          },
+        ];
       }
       if (processedData.messages && Array.isArray(processedData.messages)) {
         const convo = processedData.messages.map((m) => ({
@@ -60,7 +65,7 @@ class UploadSection extends React.Component {
         }));
         return [
           {
-            participants: processedData.participants || [],
+            participants: extractNames(processedData.participants),
             conversation: convo,
           },
         ];
