@@ -36,7 +36,7 @@ class SectionLogin extends React.Component {
                         href="#pablo"
                         target="_blank"
                         color="transparent"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i
                           className={classes.socialIcons + " fab fa-twitter"}
@@ -47,7 +47,7 @@ class SectionLogin extends React.Component {
                         href="#pablo"
                         target="_blank"
                         color="transparent"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i
                           className={classes.socialIcons + " fab fa-facebook"}
@@ -58,7 +58,7 @@ class SectionLogin extends React.Component {
                         href="#pablo"
                         target="_blank"
                         color="transparent"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                       >
                         <i
                           className={
@@ -74,7 +74,7 @@ class SectionLogin extends React.Component {
                       labelText="First Name..."
                       id="first"
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "text",
@@ -82,14 +82,14 @@ class SectionLogin extends React.Component {
                           <InputAdornment position="end">
                             <People className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                     <CustomInput
                       labelText="Email..."
                       id="email"
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "email",
@@ -97,14 +97,14 @@ class SectionLogin extends React.Component {
                           <InputAdornment position="end">
                             <Email className={classes.inputIconsColor} />
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                     <CustomInput
                       labelText="Password"
                       id="pass"
                       formControlProps={{
-                        fullWidth: true
+                        fullWidth: true,
                       }}
                       inputProps={{
                         type: "password",
@@ -114,7 +114,7 @@ class SectionLogin extends React.Component {
                               lock_outline
                             </Icon>
                           </InputAdornment>
-                        )
+                        ),
                       }}
                     />
                   </CardBody>

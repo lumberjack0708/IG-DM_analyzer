@@ -9,12 +9,12 @@ const style = {
   clearfix: {
     "&:after,&:before": {
       display: "table",
-      content: '" "'
+      content: '" "',
     },
     "&:after": {
-      clear: "both"
-    }
-  }
+      clear: "both",
+    },
+  },
 };
 
 function Clearfix({ ...props }) {
@@ -23,7 +23,7 @@ function Clearfix({ ...props }) {
 }
 
 Clearfix.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(style)(Clearfix);

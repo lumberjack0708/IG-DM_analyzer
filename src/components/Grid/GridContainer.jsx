@@ -10,8 +10,8 @@ const style = {
   grid: {
     marginRight: "-15px",
     marginLeft: "-15px",
-    width: "auto"
-  }
+    width: "auto",
+  },
 };
 
 function GridContainer({ ...props }) {
@@ -30,7 +30,7 @@ function GridContainer({ ...props }) {
 }
 
 GridContainer.defaultProps = {
-  className: ""
+  className: "",
 };
 
 GridContainer.propTypes = {
@@ -43,8 +43,8 @@ GridContainer.propTypes = {
     "flex-end",
     "space-between",
     "space-around",
-    "space-evenly"
-  ])
+    "space-evenly",
+  ]),
 };
 
 export default withStyles(style)(GridContainer);

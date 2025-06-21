@@ -13,11 +13,11 @@ function InfoArea({ ...props }) {
   const iconWrapper = classNames({
     [classes.iconWrapper]: true,
     [classes[iconColor]]: true,
-    [classes.iconWrapperVertical]: vertical
+    [classes.iconWrapperVertical]: vertical,
   });
   const iconClasses = classNames({
     [classes.icon]: true,
-    [classes.iconVertical]: vertical
+    [classes.iconVertical]: vertical,
   });
   return (
     <div className={classes.infoArea}>
@@ -33,7 +33,7 @@ function InfoArea({ ...props }) {
 }
 
 InfoArea.defaultProps = {
-  iconColor: "gray"
+  iconColor: "gray",
 };
 
 InfoArea.propTypes = {
@@ -48,9 +48,9 @@ InfoArea.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
+    "gray",
   ]),
-  vertical: PropTypes.bool
+  vertical: PropTypes.bool,
 };
 
 export default withStyles(infoStyle)(InfoArea);

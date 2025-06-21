@@ -38,7 +38,7 @@ class SectionJavascript extends React.Component {
       openLeft: false,
       openTop: false,
       openBottom: false,
-      openRight: false
+      openRight: false,
     };
   }
   handleClickOpen(modal) {
@@ -53,12 +53,12 @@ class SectionJavascript extends React.Component {
   }
   handleClosePopover(state) {
     this.setState({
-      [state]: false
+      [state]: false,
     });
   }
   handleClickButton(state) {
     this.setState({
-      [state]: true
+      [state]: true,
     });
   }
   render() {
@@ -81,12 +81,13 @@ class SectionJavascript extends React.Component {
                     block
                     onClick={() => this.handleClickOpen("classicModal")}
                   >
-                    <LibraryBooks className={classes.icon} />Classic
+                    <LibraryBooks className={classes.icon} />
+                    Classic
                   </Button>
                   <Dialog
                     classes={{
                       root: classes.center,
-                      paper: classes.modal
+                      paper: classes.modal,
                     }}
                     open={this.state.classicModal}
                     TransitionComponent={Transition}
@@ -169,7 +170,7 @@ class SectionJavascript extends React.Component {
                 <h3>Popovers</h3>
               </div>
               <Button
-                buttonRef={node => {
+                buttonRef={(node) => {
                   this.anchorElLeft = node;
                 }}
                 onClick={() => this.handleClickButton("openLeft")}
@@ -178,7 +179,7 @@ class SectionJavascript extends React.Component {
               </Button>
               <Popover
                 classes={{
-                  paper: classes.popover
+                  paper: classes.popover,
                 }}
                 open={this.state.openLeft}
                 anchorEl={this.anchorElLeft}
@@ -186,11 +187,11 @@ class SectionJavascript extends React.Component {
                 onClose={() => this.handleClosePopover("openLeft")}
                 anchorOrigin={{
                   vertical: "center",
-                  horizontal: "left"
+                  horizontal: "left",
                 }}
                 transformOrigin={{
                   vertical: "center",
-                  horizontal: "right"
+                  horizontal: "right",
                 }}
               >
                 <h3 className={classes.popoverHeader}>Popover on left</h3>
@@ -200,7 +201,7 @@ class SectionJavascript extends React.Component {
                 </div>
               </Popover>
               <Button
-                buttonRef={node => {
+                buttonRef={(node) => {
                   this.anchorElTop = node;
                 }}
                 onClick={() => this.handleClickButton("openTop")}
@@ -209,7 +210,7 @@ class SectionJavascript extends React.Component {
               </Button>
               <Popover
                 classes={{
-                  paper: classes.popover
+                  paper: classes.popover,
                 }}
                 open={this.state.openTop}
                 anchorEl={this.anchorElTop}
@@ -217,11 +218,11 @@ class SectionJavascript extends React.Component {
                 onClose={() => this.handleClosePopover("openTop")}
                 anchorOrigin={{
                   vertical: "top",
-                  horizontal: "center"
+                  horizontal: "center",
                 }}
                 transformOrigin={{
                   vertical: "bottom",
-                  horizontal: "center"
+                  horizontal: "center",
                 }}
               >
                 <h3 className={classes.popoverHeader}>Popover on top</h3>
@@ -230,7 +231,7 @@ class SectionJavascript extends React.Component {
                 </div>
               </Popover>
               <Button
-                buttonRef={node => {
+                buttonRef={(node) => {
                   this.anchorElBottom = node;
                 }}
                 onClick={() => this.handleClickButton("openBottom")}
@@ -239,7 +240,7 @@ class SectionJavascript extends React.Component {
               </Button>
               <Popover
                 classes={{
-                  paper: classes.popover
+                  paper: classes.popover,
                 }}
                 open={this.state.openBottom}
                 anchorEl={this.anchorElBottom}
@@ -247,11 +248,11 @@ class SectionJavascript extends React.Component {
                 onClose={() => this.handleClosePopover("openBottom")}
                 anchorOrigin={{
                   vertical: "bottom",
-                  horizontal: "center"
+                  horizontal: "center",
                 }}
                 transformOrigin={{
                   vertical: "top",
-                  horizontal: "center"
+                  horizontal: "center",
                 }}
               >
                 <h3 className={classes.popoverHeader}>Popover on bottom</h3>
@@ -260,7 +261,7 @@ class SectionJavascript extends React.Component {
                 </div>
               </Popover>
               <Button
-                buttonRef={node => {
+                buttonRef={(node) => {
                   this.anchorElRight = node;
                 }}
                 onClick={() => this.handleClickButton("openRight")}
@@ -269,7 +270,7 @@ class SectionJavascript extends React.Component {
               </Button>
               <Popover
                 classes={{
-                  paper: classes.popover
+                  paper: classes.popover,
                 }}
                 open={this.state.openRight}
                 anchorEl={this.anchorElRight}
@@ -277,11 +278,11 @@ class SectionJavascript extends React.Component {
                 onClose={() => this.handleClosePopover("openRight")}
                 anchorOrigin={{
                   vertical: "center",
-                  horizontal: "right"
+                  horizontal: "right",
                 }}
                 transformOrigin={{
                   vertical: "center",
-                  horizontal: "left"
+                  horizontal: "left",
                 }}
               >
                 <h3 className={classes.popoverHeader}>Popover on right</h3>

@@ -31,25 +31,25 @@ class SectionBasics extends React.Component {
       checked: [24, 22],
       selectedEnabled: "b",
       checkedA: true,
-      checkedB: false
+      checkedB: false,
     };
     this.handleChangeEnabled = this.handleChangeEnabled.bind(this);
   }
-  componentDidMount(){
-    nouislider.create(this.refs.slider1,{
+  componentDidMount() {
+    nouislider.create(this.refs.slider1, {
       start: [40],
       connect: [true, false],
       step: 1,
-      range: { min: 0, max: 100 }
+      range: { min: 0, max: 100 },
     });
-    nouislider.create(this.refs.slider2,{
+    nouislider.create(this.refs.slider2, {
       start: [20, 60],
       connect: [false, true, false],
       step: 1,
-      range: { min: 0, max: 100 }
+      range: { min: 0, max: 100 },
     });
   }
-  handleChange = name => event => {
+  handleChange = (name) => (event) => {
     this.setState({ [name]: event.target.checked });
   };
   handleChangeEnabled(event) {
@@ -67,7 +67,7 @@ class SectionBasics extends React.Component {
     }
 
     this.setState({
-      checked: newChecked
+      checked: newChecked,
     });
   }
   render() {
@@ -146,10 +146,10 @@ class SectionBasics extends React.Component {
                 <CustomInput
                   id="regular"
                   inputProps={{
-                    placeholder: "Regular"
+                    placeholder: "Regular",
                   }}
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -158,7 +158,7 @@ class SectionBasics extends React.Component {
                   labelText="With floating label"
                   id="float"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -168,7 +168,7 @@ class SectionBasics extends React.Component {
                   id="success"
                   success
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -178,7 +178,7 @@ class SectionBasics extends React.Component {
                   id="error"
                   error
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                 />
               </GridItem>
@@ -187,14 +187,14 @@ class SectionBasics extends React.Component {
                   labelText="With material Icons"
                   id="material"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                   inputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
                         <People />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                 />
               </GridItem>
@@ -203,14 +203,14 @@ class SectionBasics extends React.Component {
                   labelText="With Font Awesome Icons"
                   id="font-awesome"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                   inputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
                         <i className="fas fa-users" />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                 />
               </GridItem>
@@ -287,7 +287,7 @@ class SectionBasics extends React.Component {
                     }
                     classes={{
                       label: classes.label,
-                      disabled: classes.disabledCheckboxAndRadio
+                      disabled: classes.disabledCheckboxAndRadio,
                     }}
                     label="Disabled Unchecked"
                   />
@@ -314,7 +314,7 @@ class SectionBasics extends React.Component {
                     }
                     classes={{
                       label: classes.label,
-                      disabled: classes.disabledCheckboxAndRadio
+                      disabled: classes.disabledCheckboxAndRadio,
                     }}
                     label="Disabled Checked"
                   />
@@ -348,12 +348,12 @@ class SectionBasics extends React.Component {
                           <FiberManualRecord className={classes.radioChecked} />
                         }
                         classes={{
-                          checked: classes.radio
+                          checked: classes.radio,
                         }}
                       />
                     }
                     classes={{
-                      label: classes.label
+                      label: classes.label,
                     }}
                     label="First Radio"
                   />
@@ -382,12 +382,12 @@ class SectionBasics extends React.Component {
                           <FiberManualRecord className={classes.radioChecked} />
                         }
                         classes={{
-                          checked: classes.radio
+                          checked: classes.radio,
                         }}
                       />
                     }
                     classes={{
-                      label: classes.label
+                      label: classes.label,
                     }}
                     label="Second Radio"
                   />
@@ -417,12 +417,12 @@ class SectionBasics extends React.Component {
                         }
                         classes={{
                           checked: classes.radio,
-                          disabled: classes.disabledCheckboxAndRadio
+                          disabled: classes.disabledCheckboxAndRadio,
                         }}
                       />
                     }
                     classes={{
-                      label: classes.label
+                      label: classes.label,
                     }}
                     label="Disabled Unchecked Radio"
                   />
@@ -452,7 +452,7 @@ class SectionBasics extends React.Component {
                         }
                         classes={{
                           checked: classes.radio,
-                          disabled: classes.disabledCheckboxAndRadio
+                          disabled: classes.disabledCheckboxAndRadio,
                         }}
                       />
                     }
@@ -477,12 +477,12 @@ class SectionBasics extends React.Component {
                           checked: classes.switchChecked,
                           icon: classes.switchIcon,
                           iconChecked: classes.switchIconChecked,
-                          bar: classes.switchBar
+                          bar: classes.switchBar,
                         }}
                       />
                     }
                     classes={{
-                      label: classes.label
+                      label: classes.label,
                     }}
                     label="Toggle is on"
                   />
@@ -499,12 +499,12 @@ class SectionBasics extends React.Component {
                           checked: classes.switchChecked,
                           icon: classes.switchIcon,
                           iconChecked: classes.switchIconChecked,
-                          bar: classes.switchBar
+                          bar: classes.switchBar,
                         }}
                       />
                     }
                     classes={{
-                      label: classes.label
+                      label: classes.label,
                     }}
                     label="Toggle is off"
                   />
@@ -562,7 +562,7 @@ class SectionBasics extends React.Component {
                     { text: 8 },
                     { text: 9 },
                     { text: "..." },
-                    { text: 12 }
+                    { text: 12 },
                   ]}
                 />
                 <Paginations
@@ -573,7 +573,7 @@ class SectionBasics extends React.Component {
                     { active: true, text: 3 },
                     { text: 4 },
                     { text: 5 },
-                    { text: "NEXT" }
+                    { text: "NEXT" },
                   ]}
                   color="info"
                 />
@@ -587,7 +587,7 @@ class SectionBasics extends React.Component {
                   <h3>Sliders</h3>
                 </div>
                 <div ref="slider1" className="slider-primary"></div>
-                <br/>
+                <br />
                 <div ref="slider2" className="slider-info"></div>
               </GridItem>
               <GridItem xs={12} sm={12} md={6}>

@@ -39,7 +39,7 @@ function RegularButton({ ...props }) {
     [classes.block]: block,
     [classes.link]: link,
     [classes.justIcon]: justIcon,
-    [className]: className
+    [className]: className,
   });
   return (
     <Button {...rest} className={btnClasses}>
@@ -62,7 +62,7 @@ RegularButton.propTypes = {
     "twitter",
     "google",
     "github",
-    "transparent"
+    "transparent",
   ]),
   size: PropTypes.oneOf(["sm", "lg"]),
   simple: PropTypes.bool,
@@ -71,7 +71,7 @@ RegularButton.propTypes = {
   disabled: PropTypes.bool,
   block: PropTypes.bool,
   link: PropTypes.bool,
-  justIcon: PropTypes.bool
+  justIcon: PropTypes.bool,
 };
 
 export default withStyles(buttonStyle)(RegularButton);

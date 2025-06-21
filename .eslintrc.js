@@ -1,25 +1,33 @@
 module.exports = {
+  parser: "@babel/eslint-parser",
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
   },
   env: {
     es6: true,
     node: true,
-    browser: true
+    browser: true,
   },
   plugins: ["react"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:prettier/recommended"
   ],
+  rules: {
+    "prettier/prettier": "off",
+    "linebreak-style": "off",
+  },
   settings: {
     react: {
-      version: "detect"
-    }
-  }
+      version: "detect",
+    },
+  },
 };

@@ -33,7 +33,7 @@ class WorkSection extends React.Component {
                     labelText="Your Name"
                     id="name"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
@@ -42,7 +42,7 @@ class WorkSection extends React.Component {
                     labelText="Your Email"
                     id="email"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                 </GridItem>
@@ -51,11 +51,11 @@ class WorkSection extends React.Component {
                   id="message"
                   formControlProps={{
                     fullWidth: true,
-                    className: classes.textArea
+                    className: classes.textArea,
                   }}
                   inputProps={{
                     multiline: true,
-                    rows: 5
+                    rows: 5,
                   }}
                 />
                 <GridContainer justify="center">

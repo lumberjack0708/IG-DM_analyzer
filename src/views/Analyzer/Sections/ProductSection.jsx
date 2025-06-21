@@ -23,7 +23,8 @@ class ProductSection extends React.Component {
           <GridItem xs={12} sm={12} md={8}>
             <h2 className={classes.title}>分析您的 Instagram 對話</h2>
             <h5 className={classes.description}>
-              上傳您的 Instagram 私訊對話 JSON 檔案，我們將為您提供簡單的統計指標和圖表，
+              上傳您的 Instagram 私訊對話 JSON
+              檔案，我們將為您提供簡單的統計指標和圖表，
               讓您用於數據分析和娛樂！
             </h5>
           </GridItem>

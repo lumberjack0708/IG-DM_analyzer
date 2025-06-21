@@ -20,27 +20,21 @@ class NavPills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: props.active
+      active: props.active,
     };
   }
   handleChange = (event, active) => {
     this.setState({ active });
   };
-  handleChangeIndex = index => {
+  handleChangeIndex = (index) => {
     this.setState({ active: index });
   };
   render() {
-    const {
-      classes,
-      tabs,
-      direction,
-      color,
-      horizontal,
-      alignCenter
-    } = this.props;
+    const { classes, tabs, direction, color, horizontal, alignCenter } =
+      this.props;
     const flexContainerClasses = classNames({
       [classes.flexContainer]: true,
-      [classes.horizontalDisplay]: horizontal !== undefined
+      [classes.horizontalDisplay]: horizontal !== undefined,
     });
     const tabButtons = (
       <Tabs
@@ -48,7 +42,7 @@ class NavPills extends React.Component {
           root: classes.root,
           fixed: classes.fixed,
           flexContainer: flexContainerClasses,
-          indicator: classes.displayNone
+          indicator: classes.displayNone,
         }}
         value={this.state.active}
         onChange={this.handleChange}
@@ -62,7 +56,7 @@ class NavPills extends React.Component {
           const pillsClasses = classNames({
             [classes.pills]: true,
             [classes.horizontalPills]: horizontal !== undefined,
-            [classes.pillsWithIcons]: prop.tabIcon !== undefined
+            [classes.pillsWithIcons]: prop.tabIcon !== undefined,
           });
           return (
             <Tab
@@ -73,7 +67,7 @@ class NavPills extends React.Component {
                 root: pillsClasses,
                 labelContainer: classes.labelContainer,
                 label: classes.label,
-                selected: classes[color]
+                selected: classes[color],
               }}
             />
           );
@@ -113,7 +107,7 @@ class NavPills extends React.Component {
 
 NavPills.defaultProps = {
   active: 0,
-  color: "primary"
+  color: "primary",
 };
 
 NavPills.propTypes = {
@@ -124,8 +118,8 @@ NavPills.propTypes = {
     PropTypes.shape({
       tabButton: PropTypes.string,
       tabIcon: PropTypes.func,
-      tabContent: PropTypes.node
-    })
+      tabContent: PropTypes.node,
+    }),
   ).isRequired,
   color: PropTypes.oneOf([
     "primary",
@@ -133,14 +127,14 @@ NavPills.propTypes = {
     "danger",
     "success",
     "info",
-    "rose"
+    "rose",
   ]),
   direction: PropTypes.string,
   horizontal: PropTypes.shape({
     tabsGrid: PropTypes.object,
-    contentGrid: PropTypes.object
+    contentGrid: PropTypes.object,
   }),
-  alignCenter: PropTypes.bool
+  alignCenter: PropTypes.bool,
 };
 
 export default withStyles(navPillsStyle)(NavPills);

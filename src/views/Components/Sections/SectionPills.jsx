@@ -61,7 +61,7 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
                       tabButton: "Schedule",
@@ -84,7 +84,7 @@ class SectionPills extends React.Component {
                             benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
                       tabButton: "Tasks",
@@ -113,8 +113,8 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
@@ -123,7 +123,7 @@ class SectionPills extends React.Component {
                   color="rose"
                   horizontal={{
                     tabsGrid: { xs: 12, sm: 4, md: 4 },
-                    contentGrid: { xs: 12, sm: 8, md: 8 }
+                    contentGrid: { xs: 12, sm: 8, md: 8 },
                   }}
                   tabs={[
                     {
@@ -153,7 +153,7 @@ class SectionPills extends React.Component {
                             installed base benefits.
                           </p>
                         </span>
-                      )
+                      ),
                     },
                     {
                       tabButton: "Schedule",
@@ -176,8 +176,8 @@ class SectionPills extends React.Component {
                             benefits.
                           </p>
                         </span>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>

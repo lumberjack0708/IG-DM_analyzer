@@ -59,22 +59,28 @@ class InstructionSection extends React.Component {
             </GridItem>
           </GridContainer>
         </div>
-        
-        <GridContainer justify="center" style={{marginTop: "40px"}}>
+
+        <GridContainer justify="center" style={{ marginTop: "40px" }}>
           <GridItem xs={12} sm={12} md={8}>
-            <div style={{
-              backgroundColor: "#f8f9fa",
-              padding: "20px",
-              borderRadius: "8px",
-              border: "1px solid #dee2e6"
-            }}>
-              <h4 style={{color: "#495057", marginBottom: "15px"}}>
+            <div
+              style={{
+                backgroundColor: "#f8f9fa",
+                padding: "20px",
+                borderRadius: "8px",
+                border: "1px solid #dee2e6",
+              }}
+            >
+              <h4 style={{ color: "#495057", marginBottom: "15px" }}>
                 📋 重要提醒
               </h4>
-              <ul style={{color: "#6c757d", lineHeight: "1.6"}}>
-                <li>此工具完全在您的瀏覽器中運行，不會將您的數據上傳到任何伺服器</li>
+              <ul style={{ color: "#6c757d", lineHeight: "1.6" }}>
+                <li>
+                  此工具完全在您的瀏覽器中運行，不會將您的數據上傳到任何伺服器
+                </li>
                 <li>支持自動檢測和解碼 Unicode 編碼的中文字符</li>
-                <li>建議使用最新版本的 Chrome 或 Firefox 瀏覽器以獲得最佳體驗</li>
+                <li>
+                  建議使用最新版本的 Chrome 或 Firefox 瀏覽器以獲得最佳體驗
+                </li>
                 <li>如果檔案較大（超過 50MB），載入可能需要一些時間</li>
                 <li>重新整理頁面將清除所有已載入的數據</li>
               </ul>
@@ -86,4 +92,4 @@ class InstructionSection extends React.Component {
   }
 }
 
-export default withStyles(productStyle)(InstructionSection); 
+export default withStyles(productStyle)(InstructionSection);

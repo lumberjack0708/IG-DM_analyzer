@@ -18,7 +18,7 @@ function Pagination({ ...props }) {
         const paginationLink = classNames({
           [classes.paginationLink]: true,
           [classes[color]]: prop.active,
-          [classes.disabled]: prop.disabled
+          [classes.disabled]: prop.disabled,
         });
         return (
           <li className={classes.paginationItem} key={key}>
@@ -42,7 +42,7 @@ function Pagination({ ...props }) {
 }
 
 Pagination.defaultProps = {
-  color: "primary"
+  color: "primary",
 };
 
 Pagination.propTypes = {
@@ -53,12 +53,12 @@ Pagination.propTypes = {
       disabled: PropTypes.bool,
       text: PropTypes.oneOfType([
         PropTypes.number,
-        PropTypes.oneOf(["PREV", "NEXT", "..."])
+        PropTypes.oneOf(["PREV", "NEXT", "..."]),
       ]).isRequired,
-      onClick: PropTypes.func
-    })
+      onClick: PropTypes.func,
+    }),
   ).isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
+  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"]),
 };
 
 export default withStyles(paginationStyle)(Pagination);

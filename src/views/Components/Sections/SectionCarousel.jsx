@@ -23,7 +23,7 @@ class SectionCarousel extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false
+      autoplay: false,
     };
     return (
       <div className={classes.section}>
@@ -40,8 +40,8 @@ class SectionCarousel extends React.Component {
                     />
                     <div className="slick-caption">
                       <h4>
-                        <LocationOn className="slick-icons" />Yellowstone
-                        National Park, United States
+                        <LocationOn className="slick-icons" />
+                        Yellowstone National Park, United States
                       </h4>
                     </div>
                   </div>
@@ -53,8 +53,8 @@ class SectionCarousel extends React.Component {
                     />
                     <div className="slick-caption">
                       <h4>
-                        <LocationOn className="slick-icons" />Somewhere Beyond,
-                        United States
+                        <LocationOn className="slick-icons" />
+                        Somewhere Beyond, United States
                       </h4>
                     </div>
                   </div>
@@ -66,8 +66,8 @@ class SectionCarousel extends React.Component {
                     />
                     <div className="slick-caption">
                       <h4>
-                        <LocationOn className="slick-icons" />Yellowstone
-                        National Park, United States
+                        <LocationOn className="slick-icons" />
+                        Yellowstone National Park, United States
                       </h4>
                     </div>
                   </div>

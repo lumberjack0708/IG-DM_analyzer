@@ -43,7 +43,7 @@ class SectionTabs extends React.Component {
                           because I got the answers. I understand culture. I am
                           the nucleus.
                         </p>
-                      )
+                      ),
                     },
                     {
                       tabName: "Messages",
@@ -59,7 +59,7 @@ class SectionTabs extends React.Component {
                           to push possibilities, to show people, this is the
                           level that things could be at.
                         </p>
-                      )
+                      ),
                     },
                     {
                       tabName: "Settings",
@@ -75,8 +75,8 @@ class SectionTabs extends React.Component {
                           because I got the answers. I understand culture. I am
                           the nucleus.
                         </p>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>
@@ -101,7 +101,7 @@ class SectionTabs extends React.Component {
                           because I got the answers. I understand culture. I am
                           the nucleus.
                         </p>
-                      )
+                      ),
                     },
                     {
                       tabName: "Updates",
@@ -116,7 +116,7 @@ class SectionTabs extends React.Component {
                           to push possibilities, to show people, this is the
                           level that things could be at.
                         </p>
-                      )
+                      ),
                     },
                     {
                       tabName: "History",
@@ -131,8 +131,8 @@ class SectionTabs extends React.Component {
                           because I got the answers. I understand culture. I am
                           the nucleus.
                         </p>
-                      )
-                    }
+                      ),
+                    },
                   ]}
                 />
               </GridItem>

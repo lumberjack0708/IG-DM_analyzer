@@ -15,7 +15,7 @@ function Badge({ ...props }) {
 }
 
 Badge.defaultProps = {
-  color: "gray"
+  color: "gray",
 };
 
 Badge.propTypes = {
@@ -27,8 +27,8 @@ Badge.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
-  ])
+    "gray",
+  ]),
 };
 
 export default withStyles(badgeStyle)(Badge);

@@ -26,7 +26,7 @@ class TeamSection extends React.Component {
     const imageClasses = classNames(
       classes.imgRaised,
       classes.imgRoundedCircle,
-      classes.imgFluid
+      classes.imgFluid,
     );
     return (
       <div className={classes.section}>
